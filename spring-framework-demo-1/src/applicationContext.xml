@@ -10,6 +10,12 @@
     <bean id="myCoach"
     	  class="ph.edu.up.demo.TrackCoach">
     </bean>
+    <bean id="baseballCoach"
+    	  class="ph.edu.up.demo.BaseballCoach">
+    </bean>
+    <bean id="badmintonCoach"
+    	  class="ph.edu.up.demo.BadmintonCoach">
+   	</bean>
     
 </beans>
 
