@@ -7,14 +7,23 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean id="myCoach"
-    	  class="ph.edu.up.demo.TrackCoach">
+    <bean id="happyFortuneService"
+    	  class="ph.edu.up.demo.HappyFortuneService">
     </bean>
+    
     <bean id="baseballCoach"
     	  class="ph.edu.up.demo.BaseballCoach">
+    	  <constructor-arg ref="happyFortuneService"></constructor-arg>
     </bean>
+    
+    <bean id="trackCoach"
+    	  class="ph.edu.up.demo.TrackCoach">
+    	  <constructor-arg ref="happyFortuneService"></constructor-arg>
+    </bean>
+    
     <bean id="badmintonCoach"
     	  class="ph.edu.up.demo.BadmintonCoach">
+    	  <constructor-arg ref="happyFortuneService"></constructor-arg>
    	</bean>
     
 </beans>

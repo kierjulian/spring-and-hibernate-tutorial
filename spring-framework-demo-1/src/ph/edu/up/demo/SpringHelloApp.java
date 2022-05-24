@@ -10,22 +10,25 @@ public class SpringHelloApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// Retrieve a bean from the container
-		Coach myCoach = context.getBean("myCoach", Coach.class);
+		Coach trackCoach = context.getBean("trackCoach", Coach.class);
 		
 		// Call bean method
-		System.out.println(myCoach.getDailyWorkout());
+		System.out.println(trackCoach.getDailyWorkout());
+		System.out.println(trackCoach.getDailyFortune());
 		
 		// Retrieve a bean from the container
 		Coach baseballCoach = context.getBean("baseballCoach", Coach.class);
 		
 		// Call bean method
 		System.out.println(baseballCoach.getDailyWorkout());
+		System.out.println(baseballCoach.getDailyFortune());
 		
 		// Retrieve a bean from the container
 		Coach badmintonCoach = context.getBean("badmintonCoach", Coach.class);
 		
 		// Call bean method
 		System.out.println(badmintonCoach.getDailyWorkout());
+		System.out.println(badmintonCoach.getDailyFortune());
 		
 		// Close the context
 		context.close();
