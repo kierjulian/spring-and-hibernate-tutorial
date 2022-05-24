@@ -25,6 +25,11 @@
     	  class="ph.edu.up.demo.BadmintonCoach">
     	  <constructor-arg ref="happyFortuneService"></constructor-arg>
    	</bean>
+   	
+   	<bean id="cricketCoach"
+   	      class="ph.edu.up.demo.CricketCoach">
+   		<property name="fortuneService" ref="happyFortuneService"></property>      
+   	</bean>
     
 </beans>
 
