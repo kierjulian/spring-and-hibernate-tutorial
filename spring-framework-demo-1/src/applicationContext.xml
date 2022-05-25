@@ -36,6 +36,15 @@
    		<property name="emailAddress" value="${foo.email}"></property>
    		<property name="team" value="${foo.team}"></property>
    	</bean>
+   	
+   	<bean id="randomFortuneService"
+    	  class="ph.edu.up.demo.RandomFortuneService">
+    </bean>
+    
+    <bean id="randomCoach"
+    	  class="ph.edu.up.demo.RandomCoach">
+    	  <constructor-arg ref="randomFortuneService"></constructor-arg>
+    </bean>
     
 </beans>
 
