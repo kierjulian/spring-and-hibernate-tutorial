@@ -11,6 +11,10 @@ public class SetterDemoApp {
 		System.out.println(cricketCoach.getDailyWorkout());
 		System.out.println(cricketCoach.getDailyFortune());
 		
+		CricketCoach coach = (CricketCoach) cricketCoach;
+		System.out.println(coach.getEmailAddress());
+		System.out.println(coach.getTeam());
+		
 		context.close();
 	}
 
