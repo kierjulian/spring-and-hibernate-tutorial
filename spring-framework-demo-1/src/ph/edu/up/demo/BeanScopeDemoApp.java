@@ -12,6 +12,8 @@ public class BeanScopeDemoApp {
 		Coach trackCoach = context.getBean("trackCoach", Coach.class);
 		Coach newTrackCoach = context.getBean("trackCoach", Coach.class);
 		System.out.println(trackCoach == (newTrackCoach));
+		
+		context.close();
 	}
 
 }

@@ -14,7 +14,8 @@
     
     <bean id="trackCoach"
     	  class="ph.edu.up.demo.TrackCoach"
-    	  scope="prototype">
+    	  init-method="init"
+    	  destroy-method="destroy">
     	  <constructor-arg ref="happyFortuneService"></constructor-arg>
     </bean>
     
