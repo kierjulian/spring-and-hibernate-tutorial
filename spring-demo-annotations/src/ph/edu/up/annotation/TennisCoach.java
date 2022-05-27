@@ -10,4 +10,9 @@ public class TennisCoach implements Coach {
 		return "Practice your backend volley";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
 }

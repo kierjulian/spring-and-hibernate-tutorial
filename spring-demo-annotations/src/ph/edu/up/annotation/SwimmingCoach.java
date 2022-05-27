@@ -10,4 +10,9 @@ public class SwimmingCoach implements Coach {
 		return "Do 20 pool laps";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
 }
