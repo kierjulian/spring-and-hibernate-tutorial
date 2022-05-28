@@ -27,8 +27,8 @@ public class GolfCoach implements Coach {
 	}
 
 	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("Fortune service setter.");
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		System.out.println("doSomeCrazyStuff: Fortune service setter.");
 		this.fortuneService = fortuneService;
 	}
 
