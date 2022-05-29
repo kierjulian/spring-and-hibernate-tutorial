@@ -1,11 +1,14 @@
 package ph.edu.up.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GolfCoach implements Coach {
 	
+	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	public GolfCoach() {
@@ -21,15 +24,5 @@ public class GolfCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
-
-	public FortuneService getFortuneService() {
-		return fortuneService;
-	}
-
-	@Autowired
-	public void doSomeCrazyStuff(FortuneService fortuneService) {
-		System.out.println("doSomeCrazyStuff: Fortune service setter.");
-		this.fortuneService = fortuneService;
-	}
-
+	
 }
