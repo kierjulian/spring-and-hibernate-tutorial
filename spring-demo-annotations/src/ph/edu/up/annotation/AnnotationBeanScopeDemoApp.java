@@ -9,6 +9,7 @@ public class AnnotationBeanScopeDemoApp {
 		Coach bowlingCoach = context.getBean("bowlingCoach", Coach.class);
 		Coach anotherBowlingCoach = context.getBean("bowlingCoach", Coach.class);
 		System.out.println(bowlingCoach == anotherBowlingCoach);
+		context.close();
 	}
 
 }
