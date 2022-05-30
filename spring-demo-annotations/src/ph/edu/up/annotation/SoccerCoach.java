@@ -1,6 +1,14 @@
 package ph.edu.up.annotation;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SoccerCoach implements Coach {
+	
+	@Value("${foo.email}")
+	private String email;
+	
+	@Value("${foo.team}")
+	private String team;
 	
 	private FortuneService fortuneService;
 	
@@ -16,6 +24,14 @@ public class SoccerCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public String getEmail() {
+		return email;
 	}
 
 }
