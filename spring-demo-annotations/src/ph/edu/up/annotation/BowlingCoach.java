@@ -14,7 +14,7 @@ public class BowlingCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	@Autowired
-	public BowlingCoach(@Qualifier("RESTFortuneService") FortuneService fortuneService) {
+	public BowlingCoach(@Qualifier("happyFortuneService") FortuneService fortuneService) {
 		System.out.println("BowlingCoach: Inside the constructor");
 		this.fortuneService = fortuneService;
 	}
