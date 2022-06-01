@@ -6,5 +6,7 @@
 	</head>
 	<body>
 		The student is confirmed: ${student.firstName} ${student.lastName}
+		<br>
+		The student is in ${student.country}
 	</body>
 </html>
