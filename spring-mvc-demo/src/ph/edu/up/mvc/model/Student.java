@@ -11,6 +11,8 @@ public class Student {
 	
 	private Map<String, String> countryOptions;
 	
+	private String favoriteLanguage;
+	
 	public Student() {
 		countryOptions = new LinkedHashMap<String, String>();
 		countryOptions.put("Brazil", "Brazil");
@@ -45,6 +47,18 @@ public class Student {
 
 	public Map<String, String> getCountryOptions() {
 		return countryOptions;
+	}
+
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public void setCountryOptions(Map<String, String> countryOptions) {
+		this.countryOptions = countryOptions;
 	}
 
 }
