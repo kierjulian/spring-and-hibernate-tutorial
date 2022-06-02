@@ -1,6 +1,7 @@
 package ph.edu.up.mvc.model;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Student {
@@ -12,6 +13,8 @@ public class Student {
 	private Map<String, String> countryOptions;
 	
 	private String favoriteLanguage;
+	
+	private List<String> operatingSystems;
 	
 	public Student() {
 		countryOptions = new LinkedHashMap<String, String>();
@@ -59,6 +62,14 @@ public class Student {
 
 	public void setCountryOptions(Map<String, String> countryOptions) {
 		this.countryOptions = countryOptions;
+	}
+
+	public List<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(List<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 
 }
